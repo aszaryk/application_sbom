@@ -36,6 +36,7 @@ usage:
     
     python3 get_oss_license_info_per_app.py -a <app_id>
 
+The script will create a '<application name>-sbom-lic.csv' file using the name of the application as it appears in the Veracode platform as the initial portion of the filename. 
 
 ## NOTE
     
