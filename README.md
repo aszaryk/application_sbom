@@ -41,6 +41,7 @@ usage:
     
 If you have not created a credentials file as per above instructions, you can set environment variables before running either script:
 For example:
+
     export VERACODE_API_KEY_ID=<YOUR_API_KEY_ID>
     export VERACODE_API_KEY_SECRET=<YOUR_API_KEY_SECRET>
     
