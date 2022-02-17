@@ -23,13 +23,18 @@ Install dependencies:
 Tested using Python3 
 
 ## Generate List of Applications and ID's:
-To generate your list of Applications and APP ID's, first run this script: 'python3 get_all_app_id.py'
-This will create a 'application_ids.csv' file. Look up the appid for which you wish to extract a list of components and license info.
+To generate your list of Applications and APP ID's, first run this script: 
+    
+    python3 get_all_app_id.py
+
+The script will create a 'application_ids.csv' file. Look up the appid for which you wish to extract a list of components and license info.
 
 ## Generate component and license info for an application:
 
 
-usage: 'python3 get_oss_license_info_per_app.py -a <app_id>'
+usage: 
+    
+    python3 get_oss_license_info_per_app.py -a <app_id>
 
 
 ## NOTE
