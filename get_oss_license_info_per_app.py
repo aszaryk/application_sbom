@@ -44,7 +44,7 @@ def getBuilds(argv):
     #create CSV file with header
 
     with open(app_name+'-sbom-lic.csv', mode='w', newline='') as csv_file:
-        csv_writer = csv.DictWriter(csv_file, fieldnames=['Component Name','Version','License Name'])
+        csv_writer = csv.DictWriter(csv_file, fieldnames=['Component Name','Version','License Name','License Link'])
         csv_writer.writeheader()
 
     parseSCA(VeracodeAPI().get_detailed_report(build_id))
@@ -66,9 +66,9 @@ def parseSCA(xmlFile):
                             csvlic = lic.get("spdx_id")
                         else:    
                             csvlic = lic.get("name")
-                        #csvrating = lic.get("risk_rating")
+                        csvliclink = lic.get("license_url")
                         f = open(app_name+'-sbom-lic.csv', 'a', newline='')
-                        f.write(csvdata+csvlic+"\n")
+                        f.write(csvdata+csvlic+","+csvliclink+"\n")
                         f.close()
 
 def main():
